@@ -15,14 +15,16 @@
 <body>
 	<jsp:directive.include file="header.jsp" />
 	
-	<div class="center">
-		<h2 class="">Register as a Customer</h2>
+	<div align="center">
+		<h2 class="pageheading">
+			Register as a Customer
+		</h2>
 	</div>
 	
-	<div class="center">
+	<div align="center">
 		<form action="register_customer" method="post" id="customerForm">
 		
-		<table align="center" class="form">
+		<table class="form">
 			<tr>
 				<td align="right">E-mail:</td>
 				<td align="left"><input type="text" id="email" name="email" size="45" /></td>
@@ -59,6 +61,7 @@
 				<td align="right">Country:</td>
 				<td align="left"><input type="text" id="country" name="country" size="45" /></td>
 			</tr>																
+			<tr><td>&nbsp;</td></tr>
 			<tr>
 				<td colspan="2" align="center">
 					<button type="submit">Save</button>&nbsp;&nbsp;&nbsp;

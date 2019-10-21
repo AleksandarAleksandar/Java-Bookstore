@@ -1,23 +1,21 @@
-<div class="book-item">
-	<div class="image">
-		<a href="view_book?id=${book.bookId}"> <img class="book-small"
+<div class="book">
+	<div>
+		<a href="view_book?id=${book.bookId}"> 
+		<img class="book-small"
 			src="data:image/jpg;base64,${book.base64Image}" />
 		</a>
 	</div>
-	<div class="search-info">
-		<div>
-			<h3>
-				<a href="view_book?id=${book.bookId}"> <b>${book.title}</b></a>
-			</h3>
-		</div>
-		<div><jsp:directive.include file="book_rating.jsp" /></div>
-		<div class="author">by ${book.author}</div>
+	<div>
+		<a href="view_book?id=${book.bookId}"> <b>${book.title}</b>
+		</a>
 	</div>
-	<div class="price-group">
-		<p class="price">$${book.price}</p>
-		<div class="add-to-cart">
-			<a href="add_to_cart?book_id=${book.bookId}">Add To Cart</a>
-		</div>
+	<div>
+		<jsp:directive.include file="book_rating.jsp" />				
 	</div>
-	<div class="clearfix"></div>
+	<div>
+		<i>by ${book.author}</i>
+	</div>
+	<div>
+		<b>$${book.price}</b>
+	</div>
 </div>

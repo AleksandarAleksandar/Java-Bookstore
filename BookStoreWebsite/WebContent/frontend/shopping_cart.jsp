@@ -32,10 +32,10 @@
 		<c:if test="${cart.totalItems > 0}">
 			<form action="update_cart" method="post" id="cartForm">
 				<div>
-					<table class="cart">
+					<table border="1">
 						<tr>
 							<th>No</th>
-							<th class="text-left" colspan="2">Book</th>
+							<th colspan="2">Book</th>
 							<th>Quantity</th>
 							<th>Price</th>
 							<th>Subtotal</th>
@@ -46,10 +46,10 @@
 								<td>${status.index + 1}</td>
 								<td><img class="book-small"
 									src="data:image/jpg;base64,${item.key.base64Image}" /></td>
-								<td class="text-left"><span class="book-title">${item.key.title}</span></td>
+								<td><span id="book-title">${item.key.title}</span></td>
 								<td>
 									<input type="hidden" name="bookId" value="${item.key.bookId}" />
-									<input class="text-right" type="text" name="quantity${status.index + 1}" value="${item.value}" size="5" /></td>
+									<input type="text" name="quantity${status.index + 1}" value="${item.value}" size="5" /></td>
 								<td><fmt:formatNumber value="${item.key.price}"
 										type="currency" /></td>
 								<td><fmt:formatNumber
@@ -58,7 +58,7 @@
 							</tr>
 						</c:forEach>
 
-						<tr class="final-row">
+						<tr>
 							<td></td>
 							<td></td>
 							<td></td>
@@ -76,8 +76,8 @@
 							<td></td>
 							<td><button type="submit">Update</button></td>
 							<td><input type="button" id="clearCart" value="Clear Cart"/></td>
-							<td><a class="btn" href="${pageContext.request.contextPath}/">Continue Shopping</a></td>
-							<td><a class="btn" href="checkout">Checkout</a></td>
+							<td><a href="${pageContext.request.contextPath}/">Continue Shopping</a></td>
+							<td><a href="checkout">Checkout</a>
 						</tr>
 					</table>
 				</div>

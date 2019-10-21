@@ -58,10 +58,10 @@
 								<td>
 									<c:forTokens items="${review.stars}" delims="," var="star">
 										<c:if test="${star eq 'on'}">
-											<img src="images/rating_on.png" />
+											<img src="images/rating-on.png" />
 										</c:if>
 										<c:if test="${star eq 'off'}">
-											<img src="images/rating_off.png" />
+											<img src="images/rating-off.png" />
 										</c:if>
 									</c:forTokens>			
 										<b>${review.headline}</b>
